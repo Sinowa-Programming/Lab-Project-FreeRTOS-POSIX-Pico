@@ -38,8 +38,8 @@ extern "C" {
 #endif
 
 /* FreeRTOS+POSIX includes. */
-#include "FreeRTOS_POSIX/sys/types.h"
-#include "FreeRTOS_POSIX/signal.h"
+#include "sys/types.h"
+#include "signal.h"
 
 /**
  * @name Unit conversion constants.

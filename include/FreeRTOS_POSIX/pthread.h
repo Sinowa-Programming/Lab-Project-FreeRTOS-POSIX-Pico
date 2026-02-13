@@ -39,8 +39,8 @@ extern "C" {
 
 /* FreeRTOS+POSIX includes. POSIX states that this header shall make symbols
  * defined in sched.h and time.h visible. */
-#include "FreeRTOS_POSIX/sched.h"
-#include "FreeRTOS_POSIX/time.h"
+#include "sched.h"
+#include "time.h"
 
 /**
  * @name pthread detach state.
@@ -512,6 +512,17 @@ pthread_t pthread_self( void );
 int pthread_setschedparam( pthread_t thread,
                            int policy,
                            const struct sched_param * param );
+
+/*
+ * Flags for once initialization.
+ */
+#define	PTHREAD_NEEDS_INIT	0
+#define	PTHREAD_DONE_INIT	1
+
+/*
+ * Static once initialization values.
+ */
+#define	PTHREAD_ONCE_INIT	{ PTHREAD_NEEDS_INIT, NULL }
 
 #ifdef __cplusplus
 }

@@ -41,7 +41,7 @@ extern "C" {
 #include <stdint.h>
 
 /* FreeRTOS types include */
-#include "FreeRTOS_POSIX_types.h"
+#include "../../../FreeRTOS-Plus-POSIX/include/FreeRTOS_POSIX_types.h"
 
 /**
  * @brief Used for system times in clock ticks or CLOCKS_PER_SEC.
@@ -191,6 +191,18 @@ typedef void                         * pthread_barrierattr_t;
 #if !defined( posixconfigENABLE_OFF_T ) || ( posixconfigENABLE_OFF_T == 1 )
     typedef long int                 off_t;
 #endif
+
+/**
+ * @brief A
+ *
+ * See _pthreadtypes.h
+ */
+typedef struct	pthread_once		pthread_once_t;
+
+struct pthread_once {
+	int		state;
+	pthread_mutex_t	mutex;
+};
 
 #ifdef __cplusplus
 }

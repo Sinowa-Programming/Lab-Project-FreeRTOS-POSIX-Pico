@@ -32,7 +32,7 @@
  */
 
 /* Amazon FreeRTOS includes. */
-#include "iot_doubly_linked_list.h"
+#include "../../include/private/iot_doubly_linked_list.h"
 
 /**
  * @brief Mutex attribute object.
