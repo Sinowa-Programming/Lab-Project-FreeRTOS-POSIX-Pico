@@ -39,6 +39,7 @@ extern "C" {
 
 /* C standard library includes. */
 #include <stdint.h>
+// #include <pico/stdlib.h>
 
 /* FreeRTOS types include */
 #include "../../../FreeRTOS-Plus-POSIX/include/FreeRTOS_POSIX_types.h"
@@ -196,9 +197,9 @@ typedef void                         * pthread_barrierattr_t;
  * @brief A
  *
  * See _pthreadtypes.h
+ * NOTE: See WHAT???? I can't find it.
  */
 typedef struct	pthread_once		pthread_once_t;
-
 struct pthread_once {
 	int		state;
 	pthread_mutex_t	mutex;

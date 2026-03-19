@@ -516,13 +516,20 @@ int pthread_setschedparam( pthread_t thread,
 /*
  * Flags for once initialization.
  */
-#define	PTHREAD_NEEDS_INIT	0
-#define	PTHREAD_DONE_INIT	1
+#define PTHREAD_NEEDS_INIT  0
+#define PTHREAD_DONE_INIT   1
 
 /*
  * Static once initialization values.
  */
-#define	PTHREAD_ONCE_INIT	{ PTHREAD_NEEDS_INIT, NULL }
+#define PTHREAD_ONCE_INIT   { PTHREAD_NEEDS_INIT, PTHREAD_MUTEX_INITIALIZER }
+
+/*
+ * Static initialization values.
+ */
+#define PTHREAD_RWLOCK_INITIALIZER	NULL
+
+int pthread_once(pthread_once_t *, void (*) (void));
 
 #ifdef __cplusplus
 }

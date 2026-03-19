@@ -96,6 +96,28 @@ extern "C" {
 #endif
 /**@} */
 
+
+#define EIO		5	/* Input/output error */
+
+/* ipc/network software -- argument errors */
+#define ENOTSOCK	38	/* Socket operation on non-socket */
+#define EDESTADDRREQ	39	/* Destination address required */
+#define EPROTOTYPE	41	/* Protocol wrong type for socket */
+#define ENOPROTOOPT	42	/* Protocol not available */
+#define EPROTONOSUPPORT	43	/* Protocol not supported */
+#if __BSD_VISIBLE
+#define ESOCKTNOSUPPORT	44	/* Socket type not supported */
+#endif
+#define EOPNOTSUPP	45	/* Operation not supported */
+#if __BSD_VISIBLE
+#define EPFNOSUPPORT	46	/* Protocol family not supported */
+#endif
+#define EAFNOSUPPORT	47	/* Address family not supported by protocol family */
+#define EADDRINUSE	48	/* Address already in use */
+#define EADDRNOTAVAIL	49	/* Can't assign requested address */
+
+
+
 #ifdef __cplusplus
 }
 #endif
