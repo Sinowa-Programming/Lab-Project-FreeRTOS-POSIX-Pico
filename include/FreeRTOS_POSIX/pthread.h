@@ -527,6 +527,7 @@ int pthread_setschedparam( pthread_t thread,
 /*
  * Static initialization values.
  */
+#define PTHREAD_MUTEX_INITIALIZER	NULL
 #define PTHREAD_RWLOCK_INITIALIZER	NULL
 
 int pthread_once(pthread_once_t *, void (*) (void));
